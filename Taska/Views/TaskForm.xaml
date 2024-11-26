@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Taska.ModelView"
+             x:DataType="vm:TaskFormViewModel"
+             x:Class="Taska.Views.TaskForm"
+             Title="Add New Task">
+    <VerticalStackLayout Padding="20">
+        <Grid ColumnDefinitions="*, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto" MaximumWidthRequest="500" ColumnSpacing="15" RowSpacing="15" Margin="0, 10, 0, 0">
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Add new task"/>
+
+            <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                <Label Text="Task name" Margin="0, 0, 0, 6"/>
+                <Entry Text="{Binding TaskName}"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="2" Grid.ColumnSpan="2">
+                <Label Text="Task description" Margin="0, 0, 0, 6"/>
+                <Entry Text="{Binding TaskDescription}"/>
+            </VerticalStackLayout>
+
+            <Button Grid.Row="3" Grid.Column="0" Text="Cancel" Clicked="OnCloseModal"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="Save" Command="{Binding AddTaskCommand}"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
