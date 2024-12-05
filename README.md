@@ -15,7 +15,7 @@ Taska is a simple and intuitive task management application built using .NET MAU
 - **Database**: [SQLite](https://www.sqlite.org/index.html)
 - **Programming Language**: C#
 
-- Contributing
+##Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
 
